@@ -3,7 +3,18 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <nav className="w-full py-6 px-16 flex items-center justify-between">
-      <div className="font-heading text-2xl font-bold">JJ</div>
+      <div className="font-heading text-2xl font-bold">
+        <ul>
+          <li>
+            <a
+              href="/"
+              className="text-foreground hover:text-primary transition"
+            >
+              JJ
+            </a>
+          </li>
+        </ul>
+      </div>
       <ul className="flex items-center gap-8">
         <li>
           <a
