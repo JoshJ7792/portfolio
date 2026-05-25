@@ -1,14 +1,20 @@
+"use client";
 import Link from "next/link";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 export default function Nav() {
   return (
-    <nav className="w-full py-6 px-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full py-6 px-16 flex items-center justify-between bg-background/40 backdrop-blur-md">
       <div className="font-heading text-2xl font-bold">
         <ul>
           <li>
             <a
               href="/"
               className="text-foreground hover:text-primary transition"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollTo("home");
+              }}
             >
               JJ
             </a>
@@ -20,6 +26,10 @@ export default function Nav() {
           <a
             href="#about"
             className="text-foreground hover:text-primary transition"
+            onClick={(e) => {
+              e.preventDefault();
+              smoothScrollTo("about");
+            }}
           >
             About
           </a>
